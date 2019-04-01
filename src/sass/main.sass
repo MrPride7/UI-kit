@@ -1,0 +1,108 @@
+//------MIXINS------
+
+=margin($top,$right,$bot,$left)
+    margin: ($top/16)+rem ($right/16)+rem ($bot/16)+rem ($left/16)+rem
+
+=shadow($color, $height)
+    box-shadow: 0 $height*0.1 mix(black, $color, 20%)
+//------VARIABLES------
+
+$orange: #e75735
+$green: #4eb7a8
+$gray: #e5e5e5
+$darkGray: #4f4f4f
+
+//------standard-buttons------
+$btn-width: 9.56rem
+$btn-height: 2.68rem
+$big-btn-width: 14.3rem
+$big-btn-height: 3.93rem
+//------MAIN------
+
+*, *:after, *:before
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body,html
+    font-family: 'Lato-Regular', sans-serif
+    @media only screen and (min-width: 320px)
+        font-size: 12px
+    @media only screen and (min-width: 640px)
+        font-size: 14px
+    @media only screen and (min-width: 1366px)
+        font-size: 16px
+
+.container
+    +margin(168,103,0,103)
+
+//------STANDARD-BUTTONS------
+
+.UI-block__header
+    font-family: 'Lato-Black', sans-serif
+    text-transform: uppercase
+    text-align: center
+    color: $darkGray
+    font-size: 2.19rem
+    font-weight: bold
+
+.standard-buttons__header
+    margin-bottom: 7.93rem
+
+.UI-block__content
+    display: flex
+    justify-content: center
+
+.UI-block__column
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+    &:first-child
+        justify-content: flex-end
+    &:last-child
+        flex-flow: row-reverse
+        flex-wrap: wrap
+        justify-content: flex-end
+
+.standard-buttons__button
+    display: flex
+    font-size: 1.2rem
+    width: $btn-width
+    height: $btn-height
+    +margin(20, 22, 20, 22)
+    border-radius: 7px
+    text-transform: uppercase
+    justify-content: center
+    align-items: center
+    color: white
+    font-weight: bold
+    &:hover
+        cursor: pointer
+
+.standard-buttons__button_big
+    font-size: 1.46rem
+    width: $big-btn-width
+    height: $big-btn-height
+
+.standard-buttons__button_green
+    background-color: $green
+
+.standard-buttons__button_green.standard-buttons__button_shadowed
+    +shadow($green, $btn-height)
+
+.standard-buttons__button_white-green
+    border: 2px solid $green
+    color: $green
+    box-shadow: 0 $btn-height*0.1 $green
+
+.standard-buttons__button_orange
+    background-color: $orange
+
+.standard-buttons__button_orange.standard-buttons__button_shadowed
+    +shadow($orange, $btn-height)
+
+.standard-buttons__button_white-orange
+    border: 2px solid $orange
+    color: $orange
+    box-shadow: 0 $btn-height*0.1 $orange
+
