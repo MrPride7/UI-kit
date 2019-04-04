@@ -24,8 +24,18 @@ $big-btn-height: 3.93rem
     margin: 0
     padding: 0
 
-a
-    text-decoration: none
+button
+    padding: 0
+    border: none
+    font: inherit
+    color: inherit
+    background-color: transparent
+    cursor: pointer
+    &:active,
+    &:focus
+        outline: none
+
+
 
 body,html
     font-family: 'Lato-Regular', sans-serif
@@ -40,6 +50,9 @@ body,html
     +margin(168,103,0,103)
 
 //------STANDARD-BUTTONS------
+
+.UI-block
+    margin-bottom: 7rem
 
 .UI-block__header
     font-family: 'Lato-Black', sans-serif
@@ -56,16 +69,19 @@ body,html
     display: flex
     justify-content: center
 
-.UI-block__column
+.UI-block__grp
     display: flex
     flex-wrap: wrap
     align-items: flex-end
+
+.standard-buttons__grp
     &:first-child
         justify-content: flex-end
     &:last-child
         flex-flow: row-reverse
         flex-wrap: wrap
         justify-content: flex-end
+
 
 .standard-buttons__button
     display: flex
@@ -81,8 +97,6 @@ body,html
     font-weight: bold
     overflow: hidden
     position: relative
-    &:hover
-        cursor: pointer
 
 .standard-buttons__button_big
     font-size: 1.46rem
@@ -125,3 +139,44 @@ body,html
         transform: scale(2.5)
         opacity: 0
 
+//------ARROW BUTTONS------
+
+.arrow-buttons__button
+    width: 6.12rem
+    height: 6.12rem
+    border-radius: 50%
+    background-color: $green
+    +margin(0,24,0,24)
+    position: relative
+    &:first-child .arrow-buttons__arrow
+        transform: rotate(132deg)
+        right: 28%
+    &:last-child .arrow-buttons__arrow
+        transform: rotate(-46deg)
+        right: 38%
+
+.arrow-buttons__arrow
+    width: 2.12rem
+    height: 2.12rem
+    background-color: inherit
+    border: 0.5rem solid #fff
+    border-top: none
+    border-left: none
+    position: absolute
+    top: 32%
+
+.arrow-buttons__button_disabled
+    background-color: #e5e5e5
+    border: #e5e5e5
+
+.arrow-buttons__button_bordered
+    background-color: #fff
+    border: 0.5rem solid $green
+    .arrow-buttons__arrow
+        border: 0.5rem solid $green
+        border-top: none
+        border-left: none
+    &:first-child .arrow-buttons__arrow
+        right: 24%
+    &:last-child .arrow-buttons__arrow
+        right: 36%
