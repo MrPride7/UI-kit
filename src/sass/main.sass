@@ -154,6 +154,14 @@ body,html
     &:last-child .arrow-buttons__arrow
         transform: rotate(-46deg)
         right: 38%
+    &:active
+        animation: push 0.1s linear
+
+    @keyframes push
+        to
+            transform: scale(0.9)
+            box-shadow: 0 0 10px #111
+
 
 .arrow-buttons__arrow
     width: 2.12rem
@@ -168,6 +176,9 @@ body,html
 .arrow-buttons__button_disabled
     background-color: #e5e5e5
     border: #e5e5e5
+    &:active
+        animation: none
+
 
 .arrow-buttons__button_bordered
     background-color: #fff
