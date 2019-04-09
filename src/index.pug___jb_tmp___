@@ -42,4 +42,4 @@ html(lang="en")
                             .arrow-buttons__arrow
                         button.arrow-buttons__button
                             .arrow-buttons__arrow
-                                
+            .UI-block
