@@ -202,7 +202,7 @@ body,html
 .pie-chart__grp
     display: flex
     width: 100%
-    justify-content: space-between
+    //justify-content: space-between
 
 %circle
     height: 12rem
@@ -211,7 +211,7 @@ body,html
     overflow: hidden
     position: relative
 
-.pie-chart__donut
+.pie-chart__doughnut
     @extend %circle
     background-color: #e5e5e5
     &:after 
@@ -225,9 +225,9 @@ body,html
         left: 17.5%
 
 .pie-chart__percentages
-    @extend %circle
-    border-radius: 0
-
+    height: 12rem
+    position: relative
+    margin-right: -9.2rem
 
 //------sector is the auxillary block for donut
 .sector
