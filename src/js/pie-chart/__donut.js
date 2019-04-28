@@ -12,7 +12,7 @@ var dataset = [
 ];
 
 var maxValue = 25;
-var container = $('.pie-chart__tor');
+var container = $('.pie-chart__donut');
 
 var addSector = function(data, startAngle, collapse) {
     var sectorDeg = 3.6 * data.value;
