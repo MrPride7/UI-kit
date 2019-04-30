@@ -199,11 +199,6 @@ body,html
 .pie-chart__header
     margin-bottom: 3.6rem
 
-.pie-chart__grp
-    display: flex
-    width: 100%
-    //justify-content: space-between
-
 %circle
     height: 12rem
     width: 12rem
@@ -229,7 +224,8 @@ body,html
     position: relative
     margin-right: -9.2rem
 
-//------sector is the auxillary block for donut
+//******sector is the auxillary block for donut******
+
 .sector
     width: 50%
     height: 50%
@@ -237,3 +233,72 @@ body,html
     left: 50%
     top: 0
     transform-origin: left bottom
+
+//******SLIDERS******
+
+.sliders__header
+    margin-bottom: 6.12rem
+
+.sliders__content
+    display: flex
+    justify-content: space-between
+
+.sliders__grp
+    position: relative
+    width: 44%
+
+.sliders__slider
+    display: inline-block
+    width: 100%
+    height: 0.7rem
+    background-color: $gray
+    position: relative
+    &:before
+        content: ""
+        background-color: $gray
+        position: absolute
+        left: -0.35rem
+        height: 0.7rem
+        width: 0.7rem
+        border-radius: 50%
+    &:after
+        content: ""
+        background-color: $gray
+        position: absolute
+        right: -0.35rem
+        height: 0.7rem
+        width: 0.7rem
+        border-radius: 50%
+
+.pointer-grp
+    position: absolute
+    bottom: -0.7rem
+    left: -2rem
+    width: 4.3rem
+    height: 6.3rem
+
+.pointer-grp__pointer
+    position: absolute
+    top: 3.7rem
+    width: 2.4rem
+    height: 2.4rem
+    border-radius: 50%
+    background-color: $orange
+    left: 0.94rem
+
+.pointer-grp__value
+    position: absolute
+    background-color: $orange
+    border-radius: 10%
+    width: 100%
+    height: 3rem
+    &:before
+        content: ''
+        position: absolute
+        top: 2.7rem
+        left: 1.8rem
+        transform: rotate(45deg)
+        width: 0.7rem
+        height: 0.7rem
+        background-color: $orange
+//разобраться с миксами, подумай, как именовать классы!
