@@ -54,14 +54,11 @@ html(lang="en")
             .UI-block.sliders
                 .UI-block__header.sliders__header sliders
                 .UI-block__content.sliders__content
-                    .sliders__grp.slider
-                        .slider__line
-                        .pointer-grp
-                            .pointer-grp__pointer
-                            .pointer-grp__value
-                    .sliders__grp.slider
-                        .slider__line
-                        .pointer-grp
-                            .pointer-grp__pointer
+                    .sliders__elems.value
+                        .sliders__pointer#pointer
+                        input(type="range" min="0" max="100" value="0")#slider_valued.sliders__slider.sliders__slider_color-orange
+                    .sliders__elems
+                        .sliders__scale
+                        input(type="range" min="0" max="100" value="0").sliders__slider.sliders__slider_color-green
 
 
