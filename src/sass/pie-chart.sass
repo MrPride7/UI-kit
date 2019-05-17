@@ -1,0 +1,39 @@
+.pie-chart__header
+    margin-bottom: 3.6rem
+
+%circle
+    height: 12rem
+    width: 12rem
+    border-radius: 100%
+    overflow: hidden
+    position: relative
+
+.pie-chart__doughnut
+    @extend %circle
+    background-color: #e5e5e5
+    &:after
+        content: ''
+        position: absolute
+        width: 65%
+        height: 65%
+        background: #fff
+        border-radius: 50%
+        top: 17.5%
+        left: 17.5%
+
+.pie-chart__percentages
+    height: 12rem
+    position: relative
+    margin-right: -9.2rem
+
+//***************************************
+//sector is the auxillary block for donut
+//***************************************
+
+.sector
+    width: 50%
+    height: 50%
+    position: absolute
+    left: 50%
+    top: 0
+    transform-origin: left bottom

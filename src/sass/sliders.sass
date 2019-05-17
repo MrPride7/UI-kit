@@ -1,0 +1,89 @@
+.sliders__header
+    margin-bottom: 6rem
+
+.sliders__content
+    display: flex
+    position: relative
+    justify-content: space-between
+
+.sliders__elems
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    width: 44%
+
+.sliders__slider
+    width: 100%
+    margin-bottom: 1.3rem
+    height: 0.7rem
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    background-color: $gray
+    border-radius: 5px
+    outline: none
+    &::-webkit-slider-thumb
+        -webkit-appearance: none
+        appearance: none
+        width: 2.4rem
+        height: 2.4rem
+        border-radius: 50%
+        cursor: pointer
+    &::-moz-range-thumb
+        -moz-appearance: none
+        appearance: none
+        width: 2.4rem
+        height: 2.4rem
+        border-radius: 50%
+        cursor: pointer
+
+.sliders__slider_color-orange
+    &::-webkit-slider-thumb
+        background-color: $orange
+    &::-moz-range-thumb
+        background-color: $orange
+
+.sliders__slider_color-green
+    background: linear-gradient(90deg, $gray 60%, $gray 60%)
+    &::-webkit-slider-thumb
+        background-color: $green
+    &::-moz-range-thumb
+        background-color: $green
+
+.sliders__pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    width: 4.3rem
+    height: 3rem
+    border-radius: 5px
+    background-color: $orange
+    bottom: 5rem
+    left: -1rem
+    color: #ffffff
+    font-size: 1.5rem
+    font-weight: 600
+    &:after
+        content: ""
+        position: absolute
+        top: 2.6rem
+        left: 1.9rem
+        width: 0.7rem
+        height: 0.7rem
+        border-radius: 0 0 4px 0
+        background-color: $orange
+        transform: rotate(45deg)
+
+.sliders__scale
+    display: flex
+    justify-content: space-between
+
+.scale
+    width: 100%
+
+.scale__point
+    font-size: 1.3rem
+    color: #d1d1d1
+    font-weight: 600
+    width: 1.6rem

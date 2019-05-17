@@ -7,61 +7,8 @@ html(lang="en")
         title Document
     body
         .container
-            .UI-block.standard-buttons
-                .UI-block__header.standard-buttons__header Standard buttons
-                .UI-block__content
-                    .UI-block__grp.standard-buttons__grp
-                        button.standard-buttons__button.standard-buttons__button_green Button
-                        button.standard-buttons__button.standard-buttons__button_green.standard-buttons__button_big Button
-                        button.standard-buttons__button.standard-buttons__button_green.standard-buttons__button_shadowed Button
-                        button.standard-buttons__button.standard-buttons__button_green.standard-buttons__button_shadowed.standard-buttons__button_big Button
-                        button.standard-buttons__button.standard-buttons__button_white-green Button
-                        button.standard-buttons__button.standard-buttons__button_white-green.standard-buttons__button_big Button
-                    .UI-block__grp.standard-buttons__grp
-                        button.standard-buttons__button.standard-buttons__button_orange Button
-                        button.standard-buttons__button.standard-buttons__button_orange.standard-buttons__button_big Button
-                        button.standard-buttons__button.standard-buttons__button_orange.standard-buttons__button_shadowed Button
-                        button.standard-buttons__button.standard-buttons__button_orange.standard-buttons__button_shadowed.standard-buttons__button_big Button
-                        button.standard-buttons__button.standard-buttons__button_white-orange Button
-                        button.standard-buttons__button.standard-buttons__button_white-orange.standard-buttons__button_big Button
-            .UI-block.arrow-buttons
-                .UI-block__header.arrow-buttons__header Arrow buttons
-                .UI-block__content
-                    .UI-block__grp
-                        button.arrow-buttons__button.arrow-buttons__button_bordered
-                            .arrow-buttons__arrow
-                        button.arrow-buttons__button.arrow-buttons__button_bordered
-                            .arrow-buttons__arrow
-                    .UI-block__grp
-                        button.arrow-buttons__button.arrow-buttons__button_disabled
-                            .arrow-buttons__arrow
-                        button.arrow-buttons__button.arrow-buttons__button_disabled
-                            .arrow-buttons__arrow
-                    .UI-block__grp
-                        button.arrow-buttons__button
-                            .arrow-buttons__arrow
-                        button.arrow-buttons__button
-                            .arrow-buttons__arrow
-            .UI-block.pie-chart
-                .UI-block__header.pie-chart__header percentages / pie chart
-                .UI-block__content
-                    .UI-block__grp
-                        canvas.pie-chart__percentages
-                        canvas.pie-chart__percentages
-                        canvas.pie-chart__percentages
-                        canvas.pie-chart__percentages
-                        .pie-chart__doughnut
-            .UI-block.sliders
-                .UI-block__header.sliders__header sliders
-                .UI-block__content.sliders__content
-                    .sliders__elems
-                        .sliders__pointer#pointer
-                        input(type="range" min="0" max="100" value="0")#slider_valued.sliders__slider.sliders__slider_color-orange
-                    .sliders__elems
-                        input(type="range" min="0" max="100" value="0")#slider_tracked.sliders__slider.sliders__slider_color-green
-                        .sliders__scale.scale
-                            -
-                                var points = ["0", "25", "50","75", "100"]
-                            each point in points
-                                div.scale__point= point
-
+            include ./PugFiles/standard-buttons
+            include ./PugFiles/arrow-buttons
+            include ./PugFiles/pie-chart
+            include ./PugFiles/sliders
+            include ./PugFiles/stages
