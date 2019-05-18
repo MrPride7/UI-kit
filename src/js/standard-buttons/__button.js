@@ -12,9 +12,17 @@ function createRipple (e) {
 
     circle.style.width = circle.style.height = d + 'px';
 
-var rect = this.getBoundingClientRect();
     circle.style.left = e.pageX - screenLeft - this.offsetLeft - d / 2 + "px";
     circle.style.top = e.pageY - screenTop - this.offsetTop - d / 2 + "px";
-
-    circle.classList.add('ripple')
+    if (this.classList.contains('standard-buttons__button_white-orange')) {
+        circle.classList.add('orangeRipple');
+    }
+    if (this.classList.contains('standard-buttons__button_white-green')) {
+        circle.classList.add('greenRipple');
+    }
+    else {
+        circle.classList.add('whiteRipple');
+    }
 }
+
+
