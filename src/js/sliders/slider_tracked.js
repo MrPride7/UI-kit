@@ -1,7 +1,5 @@
 const sliderTrk = document.getElementById('slider_tracked');
 
-console.log('Test1 =' + sliderTrk.value);
-
 sliderTrk.addEventListener("mousemove", function () {
     var x = sliderTrk.value;
     console.log('Test2 =' + sliderTrk.value);

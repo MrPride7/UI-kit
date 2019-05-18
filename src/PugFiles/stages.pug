@@ -1,3 +1,8 @@
 .UI-block.stages
-    .UI-block__header.stages__header
+    .UI-block__header.stages__header Stages
     .UI-block__content.stages__content
+        .stages__stage-bar#st-bar
+        -
+            var points = ["1", "2", "3","4", "5"]
+        each point in points
+            div.stages__stage= point
