@@ -1,0 +1,60 @@
+.form-elements__header
+    margin-bottom: 6rem
+
+.form-elements__content
+    display: flex
+    justify-content: space-around
+
+.form-elements__grp
+    width: 50%
+
+.two-condition-elems__header
+    margin-bottom: 4rem
+
+input
+    display: none
+//*****************************
+//******tick_boxes*************
+//*****************************
+.tick_boxes__container
+    display: flex
+    justify-content: center
+    width: 4.8rem
+    cursor: pointer
+
+.tick_box
+    display: inline-block
+    position: relative
+    width: 2.9rem
+    height: 2.9rem
+    background-color: $lightGray
+    border-radius: 50%
+
+%before-after
+    content: ''
+    position: absolute
+    height: 0.3rem
+    background-color: $gray
+
+.tick_box
+    &:after
+        @extend %before-after
+        width: 1.4rem
+        transform: rotate(-45deg)
+        top: 1.3rem
+        left: 1rem
+    &:before
+        @extend %before-after
+        width: 0.8rem
+        transform: rotate(45deg)
+        top: 1.5rem
+        left: 0.7rem
+
+input:checked+.tick_box
+    background-color: $green
+    &:before,
+    &:after
+        background-color: #fff
+
+
+    

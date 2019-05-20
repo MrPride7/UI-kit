@@ -22,8 +22,8 @@ function Draw(dataset)
                 var y = 25 + i * 50; // y coordinate
                 var radius = 65; // Arc radius
                 var startAngle = -1.57; // Starting point on circle
-                var endAngle = -1.56 + offset; //Math.PI+(Math.PI*j)/2; // End point on circle
-                var anticlockwise = false;//(i%2==0) ? false : true; // clockwise or anticlockwise
+                var endAngle = -1.56 + offset; // End point on circle
+                var anticlockwise = false;// clockwise or anticlockwise
 
                 ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
                 ctx.stroke();
