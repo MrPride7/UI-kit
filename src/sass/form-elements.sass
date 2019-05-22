@@ -11,20 +11,65 @@
 .two-condition-elems__header
     margin-bottom: 4rem
 
-input
-    display: none
-//*****************************
-//******tick_boxes*************
-//*****************************
-.tick_boxes__container
+.two-condition-elems__container
     display: flex
     justify-content: center
-    width: 4.8rem
     cursor: pointer
+    margin: 0 0.9rem
 
-.tick_box
+.two-condition-elems__container > input
+    display: none
+
+//*****************************
+//******TOOGLES****************
+//*****************************
+
+.toogles
+    margin-bottom: 5.1rem
+
+.toogle
     display: inline-block
     position: relative
+    width: 7.18rem
+    height: 3rem
+    background-color: $lightGray
+    border-radius: 3.6rem
+    &:before
+        content: ''
+        position: absolute
+        width: 2.25rem
+        height: 2.25rem
+        background-color: #fff
+        border-radius: 50%
+        left: 0.4rem
+        top: 0.4rem
+        transition: 0.2s
+    &:after
+        content: 'off'
+        position: absolute
+        text-transform: uppercase
+        color: #fff
+        font-size: 1.5rem
+        font-weight: bold
+        right: 1rem
+        top: 0.7rem
+
+input:checked+.toogle
+    background-color: $green
+    &:before
+        left: 4.53rem
+    &:after
+        content: 'on'
+        left: 1.4rem
+
+//*****************************
+//******TICK_BOXES*************
+//*****************************
+
+.tick-box
+    display: inline-block
+    position: relative
+    display: inline-flex
     width: 2.9rem
     height: 2.9rem
     background-color: $lightGray
@@ -34,9 +79,9 @@ input
     content: ''
     position: absolute
     height: 0.3rem
-    background-color: $gray
+    background-color: #c0c0c0
 
-.tick_box
+.tick-box
     &:after
         @extend %before-after
         width: 1.4rem
@@ -50,11 +95,13 @@ input
         top: 1.5rem
         left: 0.7rem
 
-input:checked+.tick_box
+input:checked+.tick-box
     background-color: $green
     &:before,
     &:after
         background-color: #fff
+
+
 
 
     
