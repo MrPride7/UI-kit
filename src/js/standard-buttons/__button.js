@@ -1,4 +1,4 @@
-var buttons = document.getElementsByClassName('standard-buttons__button');
+var buttons = document.getElementsByClassName('button');
 
 Array.prototype.forEach.call(buttons, function (b) {
     b.addEventListener('click', createRipple);

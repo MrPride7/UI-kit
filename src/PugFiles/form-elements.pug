@@ -2,11 +2,11 @@
     .UI-block__header.form-elements__header Form elements
     .UI-block__content.form-elements__content
         .form-elements__grp.text-elems
-            form(action="#").text-elems__form
-                input(type="text" name="name").name
-                input(type="text" name="e-mail").e-mail
-                input(type="text" name="message").message
-                input(type="submit" name="submit").standard-buttons__button_green
+            form(action="#").form
+                input(type="text" required pattern="[A-Za-zА-Яа-яЁё]+[^@s]+[A-Za-zА-Яа-яЁё]" name="name" placeholder="Your Name").form__name
+                input(type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+[a-z]{2,4}$" name="e-mail" placeholder="Your E-mail").form__e-mail
+                textarea(name="message" placeholder="Your Message").form__message
+                input(type="submit" name="submit" value="submit").button.button_big.button_green.button_shadowed
         .form-elements__grp.two-condition-elems
             .toogles
                 .UI-block__header.two-condition-elems__header Toogles
