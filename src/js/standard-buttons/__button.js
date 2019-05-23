@@ -14,10 +14,10 @@ function createRipple (e) {
 
     circle.style.left = e.pageX - screenLeft - this.offsetLeft - d / 2 + "px";
     circle.style.top = e.pageY - screenTop - this.offsetTop - d / 2 + "px";
-    if (this.classList.contains('standard-buttons__button_white-orange')) {
+    if (this.classList.contains('button_white-orange')) {
         circle.classList.add('orangeRipple');
     }
-    if (this.classList.contains('standard-buttons__button_white-green')) {
+    if (this.classList.contains('button_white-green')) {
         circle.classList.add('greenRipple');
     }
     else {

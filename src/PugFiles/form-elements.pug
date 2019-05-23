@@ -2,23 +2,28 @@
     .UI-block__header.form-elements__header Form elements
     .UI-block__content.form-elements__content
         .form-elements__grp.text-elems
+            form(action="#").text-elems__form
+                input(type="text" name="name").name
+                input(type="text" name="e-mail").e-mail
+                input(type="text" name="message").message
+                input(type="submit" name="submit").standard-buttons__button_green
         .form-elements__grp.two-condition-elems
             .toogles
                 .UI-block__header.two-condition-elems__header Toogles
                 .UI-block__content
                     label.two-condition-elems__container
-                        input(type="checkbox" name="accept" value="yes")
+                        input(type="checkbox" name="#" value="yes")
                         .toogle
                     label.two-condition-elems__container
-                        input(type="checkbox" name="accept" value="yes")
+                        input(type="checkbox" name="#" value="yes")
                         .toogle
             .tick-boxes
                 .UI-block__header.two-condition-elems__header Tick-boxes
                 .UI-block__content
                     label.two-condition-elems__container
-                        input(type="checkbox" name="accept" value="yes")
+                        input(type="checkbox" name="#" value="yes")
                         .tick-box
                     label.two-condition-elems__container
-                        input(type="checkbox" name="accept" value="yes")
+                        input(type="checkbox" name="#" value="yes")
                         .tick-box
 

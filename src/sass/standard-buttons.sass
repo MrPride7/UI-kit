@@ -9,13 +9,14 @@
         flex-wrap: wrap
         justify-content: flex-end
 
-
 .standard-buttons__button
+    +margin(20, 22, 20, 22)
+
+.button
     display: flex
     font-size: 1.2rem
     width: $btn-width
     height: $btn-height
-    +margin(20, 22, 20, 22)
     border-radius: 7px
     text-transform: uppercase
     justify-content: center
@@ -25,29 +26,29 @@
     overflow: hidden
     position: relative
 
-.standard-buttons__button_big
+.button_big
     font-size: 1.46rem
     width: $big-btn-width
     height: $big-btn-height
 
-.standard-buttons__button_green
+.button_green
     background-color: $green
 
-.standard-buttons__button_green.standard-buttons__button_shadowed
+.button_green.button_shadowed
     +shadow($green, $btn-height)
 
-.standard-buttons__button_white-green
+.button_white-green
     border: 2px solid $green
     color: $green
     box-shadow: 0 $btn-height*0.1 $green
 
-.standard-buttons__button_orange
+.button_orange
     background-color: $orange
 
-.standard-buttons__button_orange.standard-buttons__button_shadowed
+.button_orange.button_shadowed
     +shadow($orange, $btn-height)
 
-.standard-buttons__button_white-orange
+.button_white-orange
     border: 2px solid $orange
     color: $orange
     box-shadow: 0 $btn-height*0.1 $orange
