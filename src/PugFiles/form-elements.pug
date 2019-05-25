@@ -3,10 +3,15 @@
     .UI-block__content.form-elements__content
         .form-elements__grp.text-elems
             form(action="#").form
-                input(type="text" required pattern="[A-Za-zА-Яа-яЁё]+[^@s]+[A-Za-zА-Яа-яЁё]" name="name" placeholder="Your Name").form__name
-                input(type="text" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+[a-z]{2,4}$" name="e-mail" placeholder="Your E-mail").form__e-mail
-                textarea(name="message" placeholder="Your Message").form__message
-                input(type="submit" name="submit" value="submit").button.button_big.button_green.button_shadowed
+                .form__element
+                    input(type="text" data-rule="required name" name="name" placeholder="Your Name")
+                    .form__indicator
+                .form__element
+                    input(type="text" data-rule="required email" name="e-mail" placeholder="Your E-mail")
+                    .form__indicator
+                .form__element.message
+                    textarea(name="message" placeholder="Your Message").message__area
+                button(type="submit" name="submit").button.button_big.button_green.button_shadowed Submit
         .form-elements__grp.two-condition-elems
             .toogles
                 .UI-block__header.two-condition-elems__header Toogles
