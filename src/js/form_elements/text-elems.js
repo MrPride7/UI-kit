@@ -1,8 +1,7 @@
 var forms = document.getElementsByTagName('form');
-/*for(var i = 0; i < forms.length; i++){
+for(var i = 0; i < forms.length; i++){
     forms[i].addEventListener('submit', validator);
-}*/
-
+}
 var rules = {
     required: function(el){
         if(el.value != ''){
@@ -19,7 +18,9 @@ var rules = {
         return reg.test(el.value);
     }
 }
-/*
+//**************************
+//*****ПРОВЕРЯЕМ ФОРМУ******
+//**************************
 function validator (e) {
     //e.preventDefault();
     var errors =[];
@@ -44,17 +45,19 @@ function validator (e) {
     }
     if(errors.length > 0){
         e.preventDefault();
-        //showErrors(errors);
     }
-}*/
+}
+//**************************
+//*****ПРОВЕРЯЕМ ИНПУТЫ*****
+//**************************
 for (var k = 0; k < forms.length; k++){
     var formElems = forms[k].elements;
     formElems = Array.prototype.slice.call(formElems);
     for (var t = 0; t < formElems.length; t++){
-         if (formElems[t].tagName !== "INPUT"){
-          formElems.splice(t);
-         }
-     }
+        if (formElems[t].tagName !== "INPUT"){
+            formElems.splice(t);
+        }
+    }
 }
 formElems.forEach(function(formInput) {
     formInput.onchange = function () {
@@ -88,4 +91,4 @@ formElems.forEach(function(formInput) {
         }
     }
 })
-//console.log(formElems);
+
