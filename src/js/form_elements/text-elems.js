@@ -1,7 +1,51 @@
 var forms = document.getElementsByTagName('form');
 for(var i = 0; i < forms.length; i++){
     forms[i].addEventListener('submit', validator);
+    var formElems = [];
+    formElems[i] = [];
+    var tempArr = forms[i].elements;
+    for(var g = 0; g < forms[i].length; g++) {
+        if(tempArr[g].tagName === "INPUT"){
+            formElems[i][g] = tempArr[g];
+        }
+    }
+    //**************************
+    //*****ПРОВЕРЯЕМ ИНПУТЫ*****
+    //**************************
+    formElems[i].forEach(function(formInput) {
+        formInput.onchange = function () {
+            var rulesList = formInput.dataset.rule;
+            if (rulesList !== undefined){
+                rulesList = rulesList.split(' ');
+                for(var i = 0; i < rulesList.length; i++){
+                    if (rulesList[i] in rules) {
+                        if(!rules[rulesList[i]](formInput)){
+                            if(formInput.nextElementSibling.classList.contains('form__indicator_valid')){
+                                formInput.nextElementSibling.classList.remove('form__indicator_valid');
+                            }
+                            if(formInput.nextElementSibling.classList.contains('form__indicator_invalid')){
+                                formInput.nextElementSibling.classList.remove('form__indicator_invalid');
+                            }
+                            formInput.nextElementSibling.classList.add('form__indicator_invalid');
+                            formInput.nextElementSibling.innerHTML = "eror";
+                        }
+                        else {
+                            if(formInput.nextElementSibling.classList.contains('form__indicator_valid')){
+                                formInput.nextElementSibling.classList.remove('form__indicator_valid');
+                            }
+                            if(formInput.nextElementSibling.classList.contains('form__indicator_invalid')){
+                                formInput.nextElementSibling.classList.remove('form__indicator_invalid');
+                            }
+                            formInput.nextElementSibling.classList.add('form__indicator_valid');
+                            formInput.nextElementSibling.innerHTML = "Thanks!";
+                        }
+                    }
+                }
+            }
+        }
+    });
 }
+
 var rules = {
     required: function(el){
         if(el.value != ''){
@@ -47,48 +91,3 @@ function validator (e) {
         e.preventDefault();
     }
 }
-//**************************
-//*****ПРОВЕРЯЕМ ИНПУТЫ*****
-//**************************
-for (var k = 0; k < forms.length; k++){
-    var formElems = forms[k].elements;
-    formElems = Array.prototype.slice.call(formElems);
-    for (var t = 0; t < formElems.length; t++){
-        if (formElems[t].tagName !== "INPUT"){
-            formElems.splice(t);
-        }
-    }
-}
-formElems.forEach(function(formInput) {
-    formInput.onchange = function () {
-        var rulesList = formInput.dataset.rule;
-        if (rulesList !== undefined){
-            rulesList = rulesList.split(' ');
-            for(var i = 0; i < rulesList.length; i++){
-                if (rulesList[i] in rules) {
-                    if(!rules[rulesList[i]](formInput)){
-                        if(formInput.nextElementSibling.classList.contains('form__indicator_valid')){
-                            formInput.nextElementSibling.classList.remove('form__indicator_valid');
-                        }
-                        if(formInput.nextElementSibling.classList.contains('form__indicator_invalid')){
-                            formInput.nextElementSibling.classList.remove('form__indicator_invalid');
-                        }
-                        formInput.nextElementSibling.classList.add('form__indicator_invalid');
-                        formInput.nextElementSibling.innerHTML = "eror";
-                    }
-                    else {
-                        if(formInput.nextElementSibling.classList.contains('form__indicator_valid')){
-                            formInput.nextElementSibling.classList.remove('form__indicator_valid');
-                        }
-                        if(formInput.nextElementSibling.classList.contains('form__indicator_invalid')){
-                            formInput.nextElementSibling.classList.remove('form__indicator_invalid');
-                        }
-                        formInput.nextElementSibling.classList.add('form__indicator_valid');
-                        formInput.nextElementSibling.innerHTML = "Thanks!";
-                    }
-                }
-            }
-        }
-    }
-})
-
