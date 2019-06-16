@@ -3,14 +3,14 @@
     .UI-block__content.form-elements__content
         .UI-block_half-width.text-elems
             form(action="#").form
-                .form__element
-                    input(type="text" data-rule="required name" name="name" placeholder="Your Name")
-                    .form__indicator
-                .form__element
-                    input(type="text" data-rule="required email" name="e-mail" placeholder="Your E-mail")
-                    .form__indicator
-                .form__element.message
-                    textarea(name="message" placeholder="Your Message").message__message-area
+                .form__element.input
+                    input(type="text" data-rule="required name" name="name" placeholder="Your Name").input__input-area.input__text
+                    .input__indicator
+                .form__element.input
+                    input(type="text" data-rule="required email" name="e-mail" placeholder="Your E-mail").input__input-area.input__text
+                    .input__indicator
+                .form__element.input
+                    textarea(name="message" placeholder="Your Message").input__input-area.input__message.message
                 button(type="submit" name="submit").form__send-button.button.button_big.button_green.button_shadowed Submit
         .UI-block_half-width.two-condition-elems
             .toogles
