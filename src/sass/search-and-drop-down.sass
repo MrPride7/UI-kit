@@ -1,6 +1,45 @@
+.search-and-drop-down__header
+    margin-bottom: 2.93rem
+
 .search-and-drop-down__content
-    border: 1px solid black
     display: flex
     justify-content: flex-start
 
+.input__search
+    height: 3.4rem
+    width: 86%
+    border-bottom-right-radius: 0
+    border-top-right-radius: 0
+
+.input__select
+    height: 3.4rem
+    width: 86%
+    border-bottom-right-radius: 0
+    border-top-right-radius: 0
+
+.input__button
+    width: 11%
+    min-width: 32px
+    border-bottom-right-radius: 5px
+    border-top-right-radius: 5px
+
 .search
+    background: $orange url("../img/icon-search.png") no-repeat center center
+
+.select
+    background: $green
+    position: relative
+    outline: none
+    &:before
+        content: ""
+        position: absolute
+        border-bottom: 0.25rem solid #fff
+        border-left: 0.25rem solid #fff
+        border-left:
+        width: 1.25rem
+        height: 1.25rem
+        top: 0.75rem
+        left: 1.35rem
+        transform: rotate(-45deg)
+
+

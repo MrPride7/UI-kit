@@ -9,3 +9,4 @@ import './js/sliders/slider_valued'
 import './js/sliders/slider_tracked'
 import './js/stages/stages'
 import './js/form_elements/text-elems'
+//import './js/search-and-drop-down/search' //не придумал

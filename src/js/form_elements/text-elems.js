@@ -64,7 +64,6 @@ var rules = {
 //*****ПРОВЕРЯЕМ ФОРМУ******
 //**************************
 function validator (e) {
-    //e.preventDefault();
     var errors =[];
     var inputs = this.elements;
     for(var i = 0; i < inputs.length; i++){

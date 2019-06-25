@@ -1,6 +1,15 @@
 .UI-block.UI-block_half-width.search-and-drop-down
-    .UI-block__header.search-and-drop-down__header search/drop down
+    .UI-block__header.search-and-drop-down__header search / drop down
     .UI-block__content.search-and-drop-down__content
         form(action="#").form
             .form__element.input
-                input(type="text" name="search" placeholder="search").input__input-area.input__search
+                input(type="text" name="search" placeholder="Search").input__input-area.input__search
+                button(type="button" name="srch-btn").input__button.search
+    .UI-block__content.search-and-drop-down__content
+        form(action="#").form
+            .form__element.input
+                select(form).input__input-area.input__select
+                    option(selected disabled) Chose An Option
+                    option #opt1
+                    option #opt2
+                button(type="button" name="select-btn").input__button.select
