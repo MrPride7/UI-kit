@@ -1,3 +1,6 @@
+//-
+    all classes in this file are described
+    in sass/general.sass
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -9,8 +12,10 @@ html(lang="en")
         .container
             include ./PugFiles/standard-buttons
             include ./PugFiles/arrow-buttons
-            include PugFiles/pie-chart_and_percentages
+            include ./PugFiles/pie-chart_and_percentages
             include ./PugFiles/sliders
             include ./PugFiles/stages
             include ./PugFiles/form-elements
-            include PugFiles/search-and-drop-down
+            .container_half-width
+                include ./PugFiles/search-and-drop-down
+                include ./PugFiles/user-profile
