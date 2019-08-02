@@ -1,3 +1,15 @@
+@mixin hover-colorize-text
+    -webkit-animation: hover-text 0.2s ease-out
+    -o-animation: hover-text 0.2s ease-out
+    animation: hover-text 0.2s ease-out
+    animation-fill-mode: forwards
+
+@mixin hover-colorize-picture
+    -webkit-animation: hover-picture 0.2s ease-out
+    -o-animation: hover-picture 0.2s ease-out
+    animation: hover-picture 0.2s ease-out
+    animation-fill-mode: forwards
+
 .user-profile__header
     margin-bottom: 2.93rem
 
@@ -47,13 +59,25 @@
     position: relative
     margin-left: 1.4rem
 
+@keyframes hover-text
+    0%
+        color: $darkGray
+    100%
+        color: $orange
+
 .description__name
     font-size: 2.18rem
     text-transform: capitalize
+    cursor: default
+    &:hover
+        @include hover-colorize-text
 
 .description__position
     font-size: 1.3rem
     text-transform: uppercase
+    cursor: default
+    &:hover
+        @include hover-colorize-text
 
 .description__links
     margin-top: 1.6rem
@@ -70,6 +94,16 @@
     height: 2.8rem
     margin: 0 1rem
 
-.twitter
-    filter: grayscale(100%)
+@keyframes hover-picture
+    0%
+        filter: grayscale(100%)
+    100%
+        filter: grayscale(0%)
 
+.links__img_offline
+    filter: grayscale(100%)
+    &:hover
+        @include hover-colorize-picture
+
+// в шаблоне была только оранжевая птичка, поэтому
+// как отобразить состояние наведения у ссылок, не придумал
